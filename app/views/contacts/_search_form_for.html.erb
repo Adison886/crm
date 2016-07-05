@@ -1,0 +1,17 @@
+<%= search_form_for @q do |f| %>
+  <div class="row">
+    <%= f.label :first_name_cont  ,class: "col-md-2"%>
+    <%= f.search_field :first_name_cont , class: "col-md-2"%>
+  </div>
+  <div class="row">
+    <%= f.label :last_name_cont  ,class: "col-md-2"%>
+    <%= f.search_field :last_name_cont , class: "col-md-2"%>
+   </div>
+  <div class="row">
+  <%= f.label :email_cont ,class: "col-md-2"%>
+  <%= f.search_field :email_cont , class: "col-md-2"%>
+  </div>
+  <div class="row">
+  <%= f.submit "search", class: "col-md-offset-2 col-md-2 btn btn-default" %>
+  </div>
+<% end %>
