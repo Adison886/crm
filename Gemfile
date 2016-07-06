@@ -67,3 +67,7 @@ gem 'ransack'
 
 #https://github.com/mbleigh/acts-as-taggable-on
 gem 'acts-as-taggable-on'
+
+#source "https://rubygems.org"
+
+gem "sinatra"
