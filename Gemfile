@@ -64,3 +64,6 @@ gem 'paperclip'
 
 #https://github.com/activerecord-hackery/ransack
 gem 'ransack'
+
+#https://github.com/mbleigh/acts-as-taggable-on
+gem 'acts-as-taggable-on'
