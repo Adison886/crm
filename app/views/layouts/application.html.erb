@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Workspace</title>
+  <title>CRM <%= yield(:title) %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -26,14 +26,30 @@
             </button>
             <a class="navbar-brand" href="#">CRM</a>
           </div>
+          
+          <% if  user_signed_in? %>
           <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+            <li>
+              <%= link_to('Logout', destroy_user_session_path, :method => :DELETE) %>        
+              </li>
+            </ul>
+            
             <ul class="nav navbar-nav">
               <li ><a href="/">Contacts</a></li>
               <li><a href="/companies">Companies</a></li>
               <li><a href="/notes">Notes</a></li>
             </ul>
-
           </div><!--/.nav-collapse -->
+          
+
+            <% else %>
+              <ul class="nav navbar-nav">
+                <li>
+                <%= link_to('Login', new_user_session_path)  %>  
+                </li>
+              </ul>
+            <% end %>
         </div><!--/.container-fluid -->
       </nav>
   <div class="panel panel-primary">

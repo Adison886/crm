@@ -32,9 +32,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-# Authentication
-# https://github.com/plataformatec/devise
-gem 'devise'
 
 group :test do
   #https://github.com/cucumber/cucumber-rails
@@ -68,6 +65,10 @@ gem 'ransack'
 #https://github.com/mbleigh/acts-as-taggable-on
 gem 'acts-as-taggable-on'
 
-#source "https://rubygems.org"
-
+#source "https://rubygems.org" 
+#gcloud require
 gem "sinatra"
+
+# Authentication
+# https://github.com/plataformatec/devise
+gem 'devise'

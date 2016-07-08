@@ -23,7 +23,10 @@
     <%= f.label :remark %><br>
     <%= f.text_field :remark %>
   </div>
-  
+  <div class="field">
+    <%= f.label :contact_id %><br>
+    <%= collection_select(:note, :contact_id, Contact.all, :id, :first_name) %>
+  </div>
   <div class="field">
     <%= f.label :avatar %><br>
     <%= f.file_field :avatar %>

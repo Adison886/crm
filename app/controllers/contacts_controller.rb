@@ -1,13 +1,14 @@
 class ContactsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_contact, only: [:show, :edit, :update, :destroy]
 
   # GET /contacts
   # GET /contacts.json
   def index
     #@contacts = Contact.all
+    
      @q = Contact.ransack(params[:q])
     if !params.has_key?( :q)
-     
        @contacts = Contact.all
     else
       #raise params.inspect
@@ -19,6 +20,7 @@ class ContactsController < ApplicationController
   # GET /contacts/1
   # GET /contacts/1.json
   def show
+    @notes = @contact.notes
   end
 
   # GET /contacts/new
